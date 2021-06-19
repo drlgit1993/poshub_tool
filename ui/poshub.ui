@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>poshub_tool</class>
+ <widget class="QMainWindow" name="poshub_tool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>523</width>
+    <height>918</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>新宋体</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>poshub_tool</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>50</width>
+    <height>50</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_rtcm_server">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>501</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>RTCM服务器</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>491</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_rtcm_server">
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_rtcm_name">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QPushButton" name="pushButton_rtcm_read">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>读取</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QLineEdit" name="lineEdit_rtcm_pwd">
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButton_rtcm_set">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEdit_rtcm_port">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>6</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_rtcm_state">
+        <property name="text">
+         <string>状态</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_rtcm_ip">
+        <property name="text">
+         <string>IP地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QComboBox" name="comboBox_rtcm_state">
+        <property name="maxCount">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ON</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_rtcm_ip">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_rtcm_point">
+        <property name="text">
+         <string>接入点</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_rtcm_name">
+        <property name="text">
+         <string>用户名</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_rtcm_pwd">
+        <property name="text">
+         <string>密码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_rtcm_port">
+        <property name="text">
+         <string>端口</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_rtcm_point">
+        <item>
+         <property name="text">
+          <string>RTCM32_GGB</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BJJZ1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>GUDN1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RTCM30_GG</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AUTO</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_uart_cfg">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_port">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>端口号</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_port">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>10</y>
+       <width>181</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_scanport">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>10</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: rgb(0, 255, 0);
+alternate-background-color: rgb(225, 225, 225);</string>
+     </property>
+     <property name="text">
+      <string>扫描串口</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_ctrlport">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>10</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: rgb(0, 255, 0);
+alternate-background-color: rgb(225, 225, 225);</string>
+     </property>
+     <property name="text">
+      <string>打开串口</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_msg_server">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>501</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>MSG服务器</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>491</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_msg_server">
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButton_msg_set">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="pushButton_msg_read">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>读取</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_msg_ip">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_msg_ip">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>IP地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEdit_msg_port">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>6</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_msg_port">
+        <property name="text">
+         <string>端口</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="comboBox_msg_state">
+        <property name="maxCount">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ON</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_msg_state">
+        <property name="text">
+         <string>状态</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>501</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_mcu_ctrl">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton_conn_usb">
+        <property name="text">
+         <string>连接USB</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButton_close_usb">
+        <property name="text">
+         <string>断开USB</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton_mk_disk">
+        <property name="text">
+         <string>设备格式化</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_read_mcu">
+        <property name="text">
+         <string>读取设备信息</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pushButton_read_disk">
+        <property name="text">
+         <string>设备容量</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_clearn">
+        <property name="text">
+         <string>清除输出</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_logout">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>491</width>
+       <height>271</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_ota_server">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>501</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>OTA服务器</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>491</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_ota_server">
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButton_ota_set">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="pushButton_ota_read">
+        <property name="font">
+         <font>
+          <family>新宋体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>读取</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_ota_ip">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_ota_ip">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>IP地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEdit_ota_port">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>6</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_ota_port">
+        <property name="text">
+         <string>端口</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="comboBox_ota_state">
+        <property name="maxCount">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ON</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_ota_state">
+        <property name="text">
+         <string>状态</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_OTA_updata">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>501</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>OTA升级</string>
+    </property>
+    <widget class="QLabel" name="label_ota_type">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>20</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>类型</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_ota_type">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>191</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LaneTo</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Poshub</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LaneTo and Poshub</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_ota_enable">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>新宋体</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: rgb(0, 255, 0);
+alternate-background-color: rgb(225, 225, 225);</string>
+     </property>
+     <property name="text">
+      <string>设置</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>523</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionabout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="actionabout_2">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_msg_ip</tabstop>
+  <tabstop>lineEdit_msg_port</tabstop>
+  <tabstop>comboBox_msg_state</tabstop>
+  <tabstop>pushButton_msg_set</tabstop>
+  <tabstop>pushButton_msg_read</tabstop>
+  <tabstop>lineEdit_rtcm_ip</tabstop>
+  <tabstop>lineEdit_rtcm_port</tabstop>
+  <tabstop>lineEdit_rtcm_name</tabstop>
+  <tabstop>lineEdit_rtcm_pwd</tabstop>
+  <tabstop>comboBox_rtcm_point</tabstop>
+  <tabstop>comboBox_rtcm_state</tabstop>
+  <tabstop>pushButton_rtcm_set</tabstop>
+  <tabstop>pushButton_rtcm_read</tabstop>
+  <tabstop>pushButton_conn_usb</tabstop>
+  <tabstop>pushButton_close_usb</tabstop>
+  <tabstop>pushButton_mk_disk</tabstop>
+  <tabstop>pushButton_read_mcu</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
